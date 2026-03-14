@@ -217,7 +217,7 @@ app.post('/api/reset', (req, res) => {
 });
 
 // Catch-all route to serve the React index.html for any frontend navigation
-app.get('/*', (req, res) => {
+app.use((req, res) => {
     res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
