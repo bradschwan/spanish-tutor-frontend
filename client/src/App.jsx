@@ -323,6 +323,17 @@ function App() {
                     <span>Faster</span>
                   </div>
                 </div>
+
+                {/* App Icon Download */}
+                <div className="mt-6 pt-4 border-t border-slate-700">
+                  <a 
+                    href="/pwa-512x512.png" 
+                    download="spanish-tutor-icon.png"
+                    className="flex items-center justify-center gap-2 w-full bg-slate-700 hover:bg-slate-600 text-slate-200 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Download App Icon
+                  </a>
+                </div>
               </div>
             )}
           </div>
