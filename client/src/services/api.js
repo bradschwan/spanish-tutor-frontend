@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // In production, the backend serves the frontend from the same domain, so we just use the relative /api path.
-// In development, Vite proxys /api to the local backend port 3000.
-const API_BASE_URL = '/api';
+// In mobile apps (Capacitor), we must specify the external AWS URL via VITE_API_URL.
+const API_BASE_URL = (import.meta.env.VITE_API_URL || '') + '/api';
 
 export const chatWithGemini = async (input, difficulty = 'intermediate') => {
     // If input is an object containing base64 audio
